@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Price Comparisons</title>
+</head>
+<body>
+    <h1>Token Price Comparisons</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Token</th>
+                <th>CEX</th>
+                <th>DEX</th>
+                <th>CEX Price</th>
+                <th>DEX Price</th>
+                <th>Difference (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comparison in comparisons %}
+            <tr>
+                <td>{{ comparison.token }}</td>
+                <td>{{ comparison.cex }}</td>
+                <td>{{ comparison.dex }}</td>
+                <td>{{ comparison.cex_price }}</td>
+                <td>{{ comparison.dex_price }}</td>
+                <td>{{ comparison.difference }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
